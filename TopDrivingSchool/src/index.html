@@ -11,10 +11,10 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/2.3.1/css/flag-icon.min.css" rel="stylesheet"/>
 </head>
 <body>
-  <nav class="navbar navbar-expand-sm navbar-light bg-light">
+  <nav class="navbar navbar-expand-sm navbar-light bg-light fixed-top">
 
       <div class="container">
-        <i class="fa fa-car fa-lg text-danger"></i>&nbsp;
+        <i class="fa fa-car fa-lg text-info"></i>&nbsp;
         <a href="index.html" class="navbar-brand" >老赵驾校</a>
         <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarNav"><span class="navbar-toggler-icon"></span></button>
         <div class="collapse navbar-collapse" id="navbarNav">
@@ -65,8 +65,8 @@
       <div class="carousel-inner">
         <div class="carousel-item carousel-image-1 active">
           <div class="container">
-            <div class="carousel-caption d-none d-sm-block text-right mb-5">
-              <h1 class="display-3">Heading One</h1>
+            <div class="carousel-caption  text-right mb-5">
+              <h1 class="display-3 d-none d-sm-block">Heading One</h1>
               <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae consequuntur architecto eius magni nobis nulla eaque. Deserunt sunt, distinctio quos.</p>
               <a href="#" class="btn btn-danger btn-lg">Sign Up Now</a>
             </div>
@@ -75,18 +75,18 @@
 
         <div class="carousel-item carousel-image-2">
           <div class="container">
-            <div class="carousel-caption d-none d-sm-block mb-5">
-              <h1 class="display-3">Heading Two</h1>
+            <div class="carousel-caption mb-5">
+              <h1 class="display-3 d-none d-sm-block">Heading Two</h1>
               <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae consequuntur architecto eius magni nobis nulla eaque. Deserunt sunt, distinctio quos.</p>
               <a href="#" class="btn btn-primary btn-lg">Learn More</a>
             </div>
           </div>
         </div>
 
-        <div class="carousel-item carousel-image-1">
+        <div class="carousel-item carousel-image-3">
           <div class="container">
-            <div class="carousel-caption d-none d-sm-block text-right mb-5">
-              <h1 class="display-3">Heading Three</h1>
+            <div class="carousel-caption text-right mb-5">
+              <h1 class="display-3 d-none d-sm-block">Heading Three</h1>
               <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae consequuntur architecto eius magni nobis nulla eaque. Deserunt sunt, distinctio quos.</p>
               <a href="#" class="btn btn-success btn-lg">Learn More</a>
             </div>
@@ -103,6 +103,76 @@
       </a>
     </div>
   </section>
+
+  <!-- HOME ICON SECTION -->
+  <section id="home-icons" class="py-5 bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 mb-2 text-center">
+          <i class="fa fa-flag-checkered  mb-2"></i>
+          <h3>专业</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat, maxime.</p>
+        </div>
+        <div class="col-md-4 mb-2 text-center">
+          <i class="fa fa-compass  mb-2"></i>
+          <h3 class="text-bold">快捷</h3>
+          <p>DOWNTOWN 分校</p>
+        </div>
+        <div class="col-md-4 mb-2 text-center">
+          <i class="fa fa-bullhorn  mb-2"></i>
+          <h3>Making Money</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat, maxime.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOME HEADING SECTION -->
+  <section id="home-heading" class="p-4">
+    <div class="dark-overlay">
+      <div class="row">
+        <div class="col">
+          <div class="container pt-5">
+            <h1>为什么选择老赵驾校？</h1>
+            <p class="d-none d-md-block">老赵驾校是经AQTR认可，SAAQ批准，能提供政府核准证书的专业驾驶学校。
+              老赵驾校创立于2002年，15年来靠着兢兢业业的努力及广大学员口碑相传，在华人社区家喻户晓并享有盛誉。
+              驾校凭借《笔试必读》、《路试宝典》、独特的视频教学方法及丰富的实践经验已经帮助大量新移民及留学生顺利获取驾照。
+              驾校也提供中国驾照翻译公证、理论课辅导、考前补钟、考试租车、预约笔试及路考等全方位服务。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- MAP SECTION -->
+<section id="map" class="p-3">
+  <i class="fa fa-car fa-lg text-info"></i>
+  <h3 class="text-center">地址</h3>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+<h3 class="text-center">Downtown 校区</h3>
+<div id="map"></div>
+<script>
+  function initMap() {
+    var uluru = {lat: -25.363, lng: 131.044};
+    var map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 4,
+      center: uluru
+    });
+    var marker = new google.maps.Marker({
+      position: uluru,
+      map: map
+    });
+  }
+</script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBCdD0-Y3uC8-KyuufjsQRgseZOKgt7r7A&callback=initMap"
+    async defer></script>
+
+    </div>
+  </div>
+</div>
+</section>
   <script src="js/jquery.min.js"></script>
   <script src="js/popper.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
